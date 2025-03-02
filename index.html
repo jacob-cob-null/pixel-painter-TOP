@@ -6,6 +6,13 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -13,11 +20,14 @@
 
         </div>
         <div class="controls">
-            <button id="reset" class="reset">Reset</button>
-            <button id="random" class="random">Random</button>
-            <button id="black" class="black">Black</button>
-            <button id="eraser" class="eraser">Eraser</button>
+            <h2>Pixel Painter</h2>
+            <button id="random" class="button random">Random</button>
+            <button id="black" class="button black">Black</button>
+            <button id="eraser" class="button eraser">Eraser</button>
             <input type="color" id="color-picker" class="color-picker">
+            <input type="range" id="cell-size" class="size-picker" min="16" max="64" value="16">
+            <h3 id="text-size"></h3>
+            <button id="reset" class="button reset">Reset</button>
         </div>
     </div>
 </body>

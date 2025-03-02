@@ -3,38 +3,105 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
 }
 
 body {
     background-color: rgb(169, 231, 250);
 }
+
 .container {
     margin: 0 auto;
     margin-top: 5em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     height: 700px;
     width: 45vw;
     background-color: #cf5353;
     border-radius: 30px;
-    padding: 4em;
+    padding: 4em 4em 4em 2em;
+    border-bottom: #813030 20px solid;
+    border-left: #813030 20px solid;
 }
 .grid-container {
     height: 600px;
     width: 600px;
     order: 2;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(216, 216, 216);
     border-radius: 15px;
     flex: 3;
+    border-top: #813030 10px solid;
+    border-right: #813030 10px solid;
+    display: flex;
+    flex-wrap: wrap;
+    padding: none !important;
 }
 .controls {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     gap: 1em;
     order: 1;
     flex: 1;
+}
+.controls > h2 {
+    position: fixed;
+    top: 15%;
+    left: 30%;
+    rotate: -20deg;
+    color: white;
+}
+.button {
+    background-color: rgb(243, 214, 179);
+    padding: 0.5em;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    border-bottom: rgb(167, 139, 106) 5px solid;
+    border-left: rgb(167, 139, 106)  5px solid;
+    font-size: 1.2em;
+    color:  rgb(150, 122, 91);
+    font-weight: bold;
+    font-family: "Funnel Display", sans-serif;
+    transition: 200ms ease-in-out;
+}
+.button:hover {
+    background-color: rgb(250, 231, 207);
+    transform: scale(0.97);
+    transform: translateX(-2px);
+    transform: translateY(2px);
+    border: none;
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(0.92);
+}
+.color-picker {
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 90%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 4px;
+    cursor:pointer;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+input[type="range"] {
+    margin-top: 3em;
+    width: 50%;
+    height: 12px;
+    border-radius: 5px;
+    background: #ddd;
+    color: #813030;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
 }
