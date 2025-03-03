@@ -27,7 +27,8 @@ function createGrid() {
         textSize.textContent = `Grid Size: ${cellSize}x${cellSize}`;
 
         cell.addEventListener('mousedown',Paint);
-        cell.addEventListener('mouseover',Paint);
+        cell.addEventListener('mousemove',Paint);
+        cell.addEventListener('mouseup',Paint);
 
     }
 }
