@@ -26,7 +26,7 @@ function createGrid() {
         canvas.appendChild(cell);
         textSize.textContent = `Grid Size: ${cellSize}x${cellSize}`;
 
-        cell.addEventListener('mouseover',Paint);
+        cell.addEventListener('click',Paint);
     }
 }
 
