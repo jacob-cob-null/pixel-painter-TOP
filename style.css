@@ -35,7 +35,7 @@ body {
     border-right: #813030 10px solid;
     display: flex;
     flex-wrap: wrap;
-    padding: none !important;
+    flex-shrink: 0;
 }
 .controls {
     display: flex;
