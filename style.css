@@ -26,7 +26,9 @@ body {
 }
 .grid-container {
     height: 600px;
+    min-height: 600px;
     width: 600px;
+    min-width: 600px;
     order: 2;
     background-color: rgb(216, 216, 216);
     border-radius: 15px;
@@ -45,11 +47,11 @@ body {
     order: 1;
     flex: 1;
 }
-.controls > h2 {
+.controls > h3 {
     position: fixed;
     top: 15%;
     left: 30%;
-    rotate: -20deg;
+    rotate: -15deg;
     color: white;
 }
 .button {
@@ -95,7 +97,7 @@ input[type="color"]::-webkit-color-swatch {
     padding: 0;
 }
 input[type="range"] {
-    margin-top: 3em;
+    margin-top: 1em;
     width: 50%;
     height: 12px;
     border-radius: 5px;
@@ -104,4 +106,7 @@ input[type="range"] {
     outline: none;
     transition: 0.3s;
     cursor: pointer;
+}
+#random {
+    margin-top: 3em;
 }

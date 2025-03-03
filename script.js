@@ -2,6 +2,7 @@ const gridSize = 600;
 const canvas = document.getElementById('grid-container');
 const sizeInput = document.getElementById('cell-size');
 let textSize = document.getElementById('text-size');
+let textMode = document.getElementById('current-mode');
 
 // buttons
 const resetButton = document.getElementById('reset');
@@ -9,10 +10,11 @@ const randomButton = document.getElementById('random');
 const colorButton = document.getElementById('color-picker');
 const eraserButton = document.getElementById('eraser');
 const blackButton = document.getElementById('black');
-
+const outlineToggle = document.getElementById('outline');
 // options
 let mode = 2;
-
+textMode.textContent = 'Current Mode: Black';
+let outline = true;
 //create grid
 function createGrid() {
     canvas.innerHTML = '';
@@ -26,9 +28,7 @@ function createGrid() {
         canvas.appendChild(cell);
         textSize.textContent = `Grid Size: ${cellSize}x${cellSize}`;
 
-        cell.addEventListener('mousedown',Paint);
-        cell.addEventListener('mousemove',Paint);
-        cell.addEventListener('mouseup',Paint);
+        cell.addEventListener('click',Paint);
 
     }
 }
@@ -70,12 +70,23 @@ function randomColors() {
 sizeInput.addEventListener('input', createGrid);
 
 //button event listeners
-randomButton.addEventListener('click', () => {mode = 1;});
-blackButton.addEventListener('click', () => {mode = 2;});
-eraserButton.addEventListener('click', () => {mode = 3;});
+randomButton.addEventListener('click', () => {mode = 1; textMode.textContent = 'Current Mode: Random';});
+blackButton.addEventListener('click', () => {mode = 2;  textMode.textContent = 'Current Mode: Black';});
+eraserButton.addEventListener('click', () => {mode = 3; textMode.textContent = 'Current Mode: Eraser';});
 colorButton.addEventListener('click', () => {mode = 4;});
 resetButton.addEventListener('click', () => {   
      document.querySelectorAll('.cell').forEach(cell => {
     cell.style.backgroundColor = 'rgb(216, 216, 216)';
     });
 });
+outlineToggle.addEventListener('click', () => {
+    document.querySelectorAll('.cell').forEach(cell => {
+        if(outline == true) {
+            cell.style.border = '1px solid black';
+        } else {
+            cell.style.border = 'none';
+        }
+    });
+    outline = !outline;
+});
+       
