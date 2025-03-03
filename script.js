@@ -25,14 +25,10 @@ function createGrid() {
         cell.style.border = '1px solid black';
         canvas.appendChild(cell);
         textSize.textContent = `Grid Size: ${cellSize}x${cellSize}`;
-<<<<<<< HEAD
 
-        cell.addEventListener('click',Paint);
-=======
-        
         cell.addEventListener('mousedown',Paint);
         cell.addEventListener('mouseover',Paint);
->>>>>>> 46f5442 (Make event listener draggable)
+
     }
 }
 
